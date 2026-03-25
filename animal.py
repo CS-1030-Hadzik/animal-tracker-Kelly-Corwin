@@ -1,29 +1,26 @@
-class Animal:
+# A blueprint of what an OBJECT could be.
+class Animal: 
     """
     Base class representing a generic animal.
     """
-    # Class-level attribute - characteristic - description
+    # CLASS-level parameter/attribute/description
     kingdom = "Animalia" # Every animal, no matter what is in "Animalia"
-    def __init__(self, name, species): # The interpreter uses "self" to track the object we are creating. Name and species are arguements. 
+
+    # OBJECT specific attributes - constructor initializer
+    # The interpreter uses "self" to track the OBJECT we are creating. Name and species are temporary arguements. 
+    def __init__(self, name, species): 
         self.name = name
         self.species = species
+    # As soon as you leave the scope of this method, name and species no longer exist.
 
-    def speak(self): # This is something the animal class can DO.
-        print(f"{self.name} makes a noise.")
+    # This is method, or something the animal CLASS can do.
+    def speak(self): 
+        print(f"{self.name} makes a noise.\n")
 
+    # This is a majic method, and it changes/overrides how print(OBJECT) behaves.
     def __str__(self):
         return (f"Kingdom: {self.kingdom}\n"
                f"Name: {self.name}\n"
-               f"Species: {self.species}")
+               f"Species: {self.species}\n")
 
-    # TODO create a class-level attribute that is a list of all the Animal objects
 
-    # TODO create the initializer for Animal with name and species as attributs
-
-    # TODO: Add a method to make a generic sound 
-    # Call the method `speak` and make it output a specific message like 
-    # "The animal makes a noise.""
-
-    # TODO __str__ method for string representation
-    # Example output
-    # Kingdom: 'kingdom attribute', Name: 'name attribute' Species: 'species attribute' 

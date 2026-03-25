@@ -1,10 +1,22 @@
-class Dog:
+# Dog doesn't know about the Animal, so you have to tell it what the PARENT CLASS is by importing it.
+from animal import Animal
+
+# Dog is a CHILD CLASS of Animal
+class Dog(Animal):
     """
     Derived class representing a dog, which is a type of Animal.
     """
-    # TODO: Initialize the Dog class and add the breed attribute.
-    # The constructor should accept name, species, and breed as parameters.
-    
+# The 'super()' function tells it to initialize from the PARENT. 
+    def __init__(self, name, species, size):
+        super().__init__(name, species)
+        self.size = size
+
+    def __str__(self):
+        return super().__str__() + f"Size: {self.size}\n"
+
+    def speak(self):
+        print(f"{self.name} did a woofs!\n")
+
     # TODO: Override the __str__ method to include the breed.
     # Example output:
     # Kingdom: 'kingdom attribute', Name: 'name attribute', Species: 'species attribute', Breed: 'breed attribute'

@@ -1,14 +1,20 @@
-from animal import Animal # From the animal.py file import the Animal class.
+# From the animal.py file import the Animal class.
+from animal import Animal 
+from dog import Dog
+from frog import Frog
+
 if __name__ == "__main__":
 
-    dog1 = Animal("Ginger", "Canine")
-    dog2 = Animal("Kronk", "Canine")
+    # This is the OBJECT of the animal CLASS. AKA an Instanciation of the class. 
+    animal = Animal("Animal Name", "Species")
+    dog = Dog("Ginger", "Canine", "Medium")
+    frog = Frog("Fred", "Amphibian", "Pond")
+    
+    print(frog)
+    frog.speak()
 
-    print(dog1)
-    dog1.speak()
-
-    print(dog2)
-    dog2.speak()
+    print(dog)
+    dog.speak()
 
     # TODO: Create an instance of the Animal class
     # TODO: Print the Animal instance
