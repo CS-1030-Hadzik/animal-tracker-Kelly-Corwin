@@ -16,12 +16,9 @@ if __name__ == "__main__":
     print(dog)
     dog.speak()
 
-    # TODO: Create an instance of the Animal class
-    # TODO: Print the Animal instance
-    # TODO: Call the method to make a generic animal sound
-
-    # TODO: Create an instance of the Dog class
-    # TODO: Print the Dog instance
-    # TODO: Call the method to make the dog-specific sound
-
-    # TODO print out all the animals
+    dog.perform_trick("dance") # We call the dog object and the perform_trick method with the sit argument.
+    dog.perform_trick("flip")
+    print(dog.name)
+    dog.new_age(-1)
+    dog.new_age(12)
+    
